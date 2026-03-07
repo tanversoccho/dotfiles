@@ -1,0 +1,24 @@
+# Ghostty Configuration with Tokyo Night Theme
+
+# 🎨 Theme Settings
+# Set the main theme to Tokyo Night
+# This provides a cool, dark blue/purple aesthetic inspired by nighttime Tokyo[citation:1]
+theme = "TokyoNight Night"
+
+# If you prefer a theme that switches with your system's appearance, use this instead:
+# theme = "light:tokyonight-day,dark:tokyonight"[citation:10]
+
+# 🔤 Font Configuration (Optional but Recommended)
+# Install a Nerd Font for icons and better visual appeal[citation:3]
+# Example with JetBrains Mono (install via: brew install --cask font-jetbrains-mono-nerd-font)
+font-family = "JetBrainsMono Nerd Font Mono"
+font-size = 12
+# ✨ Visual Effects (Optional)
+# Add a slight transparency and blur for a modern look[citation:4][citation:6][citation:10]
+background-opacity = 1.0
+background-blur-radius = 20
+
+# 👆 Cursor Settings (Optional)
+# Customize your cursor style
+cursor-style = block
+cursor-style-blink = true
