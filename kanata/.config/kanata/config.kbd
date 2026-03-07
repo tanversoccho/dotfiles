@@ -1,0 +1,13 @@
+(defcfg
+  process-unmapped-keys yes
+)
+
+(defsrc
+  esc
+  caps
+)
+
+(deflayer base
+  caps    ;; Physical Esc now outputs Caps Lock
+  esc     ;; Physical Caps Lock now outputs Esc
+)

@@ -1,0 +1,94 @@
+# Common editor backup files
+~$
+\.swp$
+\.swo$
+\~
+
+# Version control
+\.git$
+\.gitignore$
+\.gitattributes$
+\.github$
+
+# Python
+__pycache__
+\.pyc$
+\.pyo$
+\.pyd$
+\.egg-info$
+\.egg$
+\.venv$
+venv$
+env$
+
+# Node/JavaScript
+node_modules$
+package-lock\.json$
+yarn\.lock$
+
+# Compiled files
+\.o$
+\.so$
+\.a$
+\.class$
+\.exe$
+\.dll$
+
+# OS generated files
+\.DS_Store$
+\.DS_Store?
+\.Spotlight-V100$
+\.Trashes$
+ehthumbs\.db$
+Thumbs\.db$
+
+# IDE files
+\.idea$
+\.vscode$
+\.vs$
+\*.sublime-*
+
+# Logs and databases
+\.log$
+\.sql$
+\.sqlite$
+\.db$
+
+# Temporary files
+\.tmp$
+\.temp$
+\.cache$
+\.bak$
+
+# Stow specific
+\.stow-local-ignore$
+README\.md$
+LICENSE\.md$
+\.gitignore$
+
+# Your specific files to ignore
+install\.sh$
+preset\.sh$
+uninstall\.sh$
+\.editorconfig$
+CHANGELOGS\.md$
+COMMIT_MESSAGE_GUIDELINES\.md$
+CONTRIBUTING\.md$
+distro-blocklist\.json$
+\.github$
+assets$
+install-scripts$
+
+
+# Wallpaper folders - ADD THESE LINES
+wallpapers$
+wallpaper$
+wallpapers/.*
+wallpaper/.*
+\.jpg$
+\.jpeg$
+\.png$
+\.gif$
+\.bmp$
+\.svg$
+\.webp$
