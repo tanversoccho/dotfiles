@@ -1,5 +1,9 @@
+/* Waybar Minimal Pill Style Bar                     */
+/* made by shivam (github.com/shivam-salkar)         */
+/* ================================================= */
+
 * {
-    font-family: "FiraCode Nerd Font Mono", "JetBrainsMono Nerd Font", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-family: "JetbrainsMono Nerd Font", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
     font-size: 17px;
     transition: background-color .3s ease-out;
 }
@@ -8,7 +12,9 @@
 window#waybar {
     background: transparent;
     color: #e6e8ee; /* main foreground text */
-    font-family: "FiraCode Nerd Font Mono", "SpaceMono Nerd Font", feather;
+    font-family:
+        SpaceMono Nerd Font,
+        feather;
     transition: background-color .5s;
 }
 
@@ -18,16 +24,16 @@ window#waybar {
 .modules-right {
     background: #0b1220; /* dark navy pill background */
     margin: 5px 10px;
-    padding: 0 8px;  /* Fixed: proper horizontal padding */
+    padding: 0 5px;
     border-radius: 100px;
 }
 
 .modules-left {
-    padding: 0 4px;  /* Fixed: left module padding */
+    padding: 0;
 }
 
 .modules-center {
-    padding: 0 12px;  /* Fixed: center module padding */
+    padding: 0 10px;
 }
 
 /* Shared styling for most modules */
@@ -49,7 +55,7 @@ window#waybar {
 #power-profiles-daemon,
 #language,
 #mpd {
-    padding: 0 12px;  /* Fixed: increased padding for better spacing */
+    padding: 0 10px;
     border-radius: 100px;
 }
 
@@ -78,14 +84,14 @@ window#waybar {
 /* Workspace buttons */
 #workspaces button {
     background: transparent;
-    font-family: "FiraCode Nerd Font Mono", "SpaceMono Nerd Font", feather;
+    font-family:
+        SpaceMono Nerd Font,
+        feather;
     font-weight: 900;
     font-size: 13pt;
     color: #e6e8ee; /* inactive workspace text */
     border: none;
     border-radius: 100px;
-    padding: 0 8px;  /* Fixed: added padding for workspace buttons */
-    margin: 0 2px;   /* Fixed: added margin between workspaces */
 }
 
 /* Active workspace pill */
@@ -119,7 +125,7 @@ window#waybar {
 
 /* Bluetooth indicator */
 #bluetooth {
-    padding: 0 12px;  /* Fixed: consistent padding */
+    padding: 0 10px;
     border-radius: 100px;
 }
 
@@ -130,7 +136,7 @@ window#waybar {
 /* System monitor icon */
 #custom-sysmon {
     font-size: 28px;
-    padding: 0 12px;  /* Fixed: consistent padding */
+    padding: 0 10px;
     border-radius: 100px;
 }
 
@@ -140,7 +146,7 @@ window#waybar {
 
 /* Power button */
 #custom-power {
-    padding: 0 16px;  /* Fixed: more padding for power button */
+    padding: 0 12px;
     border-radius: 100px;
     font-size: 17px;
     color: #e06c75; /* soft red */
@@ -150,3 +156,4 @@ window#waybar {
     background: #111a2e;
     color: #61afef;
 }
+
