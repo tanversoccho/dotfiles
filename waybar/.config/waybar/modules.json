@@ -2,7 +2,9 @@
   "custom/arch": {
     "format": "󰣇",
     "tooltip": true,
-    "tooltip-format": ""
+    "tooltip-format": "",
+    "tooltip-format": "Application Launcher",
+    "on-click": "pgrep -x rofi > /dev/null && pkill -x rofi || rofi -show drun -show-icons"
   },
 
   "hyprland/workspaces": {
