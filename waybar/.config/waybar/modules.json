@@ -14,7 +14,7 @@
   },
 
   "hyprland/window":{
-    "format": "   {}"
+    "format": "{}"
   },
 
 
@@ -29,8 +29,8 @@
     "format-wifi": " {essid}" ,
     "tooltip": true,
     "tooltip-format": "SSID: {essid}\nSignal: {signalStrength}%\nSpeed: {bandwidthDownBits} ↓ / {bandwidthUpBits} ↑",
-    "format-ethernet": "󰌌",
-    "format-disconnected": "⚠",
+    "format-ethernet": "",
+    "format-disconnected": "",
     "interval": 2,
     "on-click": "networkmanager_dmenu"
   },
@@ -42,8 +42,6 @@
     "exec": "~/.config/waybar/scripts/sysmon.sh",
     "interval": 2
   },
-
-
 
   "cpu": {
     "format": "",
