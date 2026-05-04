@@ -1,0 +1,35 @@
+(defcfg
+  process-unmapped-keys yes
+)
+
+(defsrc
+  caps            ;; Caps Lock (now becomes Escape on tap)
+  a   s   d   f   j   k   l   ;
+  esc
+)
+
+(defvar
+  tap-time 200
+  hold-time 150
+)
+
+(defalias
+  ;; Home row mods
+  a (tap-hold $tap-time $hold-time a lmet)   ;; Left Meta/Win
+  s (tap-hold $tap-time $hold-time s lalt)   ;; Left Alt
+  d (tap-hold $tap-time $hold-time d lctl)   ;; Left Ctrl
+  f (tap-hold $tap-time $hold-time f lsft)   ;; Left Shift
+  j (tap-hold $tap-time $hold-time j rsft)   ;; Right Shift
+  k (tap-hold $tap-time $hold-time k rctl)   ;; Right Ctrl
+  l (tap-hold $tap-time $hold-time l ralt)   ;; Right Alt
+  ; (tap-hold $tap-time $hold-time ; rmet)   ;; Right Meta (commented out)
+  
+  cap-as-esc (tap-hold 200 200 esc lctl)
+  esc-as-cap (tap-hold 200 200 caps esc)
+)
+
+(deflayer base
+  @cap-as-esc     ;; Caps Lock becomes tap=Escape, hold=Ctrl
+  @a  @s  @d  @f  @j  @k  @l  @;
+  @esc-as-cap
+)
