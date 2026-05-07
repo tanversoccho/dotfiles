@@ -6,7 +6,7 @@ sort_reverse 	 = false
 sort_dir_first = true
 sort_translit  = false
 sort_fallback  = "alphabetical"
-linemode       = "none"
+linemode       = "size_and_mtime"
 show_hidden    = true
 show_symlink   = true
 scrolloff      = 5
@@ -93,12 +93,13 @@ image_bound      = [ 10000, 10000 ]
 suppress_preload = false
 
 [plugin]
+
 fetchers = [
-# MIME-type
-{ url = "*/",         run = "mime.dir",    prio = "high", group = "mime" },
-{ url = "local://*",  run = "mime.local",  prio = "high", group = "mime" },
-{ url = "remote://*", run = "mime.remote", prio = "high", group = "mime" },
+    { id = "mime-dir",     url = "*/",         run = "mime.dir",    prio = "high", group = "mime" },
+    { id = "mime-local",   url = "local://*",  run = "mime.local",  prio = "high", group = "mime" },
+    { id = "mime-remote",  url = "remote://*", run = "mime.remote", prio = "high", group = "mime" },
 ]
+
 spotters = [
 # Multi-file
 { mime = "multi/*", run = "multi" },
