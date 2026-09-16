@@ -1,111 +1,152 @@
-configuration{
-    modi: ["drun", "window", "run"];
-    icon-theme: "Papirus-Dark";
-    show-icons: true;
-    terminal: "kitty";
-    drun-display-format: "{icon} {name}";
-    location: 0;
-    disable-history: false;
-    sidebar-mode: true;
-    // display-drun: " ";
-    // display-run: " ";
-    // display-window: " ";
+configuration {
+modi: ["drun", "window", "run"];
+      icon-theme: "Papirus-Dark";
+      show-icons: true;
+terminal: "kitty";
+          drun-display-format: "{icon} {name}";
+location: 0;
+          disable-history: false;
+          sidebar-mode: false;
+font: "JetBrainsMono Nerd Font 11";
 
-    //adding vim keybindings
-    kb-row-left:  "Control+h,Left";
-    kb-row-down:  "Control+j,Down";
-    kb-row-up:    "Control+k,Up";
-    kb-row-right: "Control+l,Right";
+      kb-row-left:  "Control+h,Left";
+      kb-row-down:  "Control+j,Down";
+      kb-row-up:    "Control+k,Up";
+      kb-row-right: "Control+l,Right";
+      kb-accept-entry: "Control+z,Control+y,Return,KP_Enter";
 
-    kb-accept-entry: "Control+z,Control+y,Return,KP_Enter";
-
-    //fixing up
-    kb-remove-to-eol:     "";
-    kb-move-char-back:    "Control+b";
-    kb-remove-char-back:  "BackSpace";
-    kb-move-char-forward: "Control+f";
-    kb-mode-complete:     "Control+o";
+      kb-remove-to-eol:     "";
+      kb-move-char-back:    "Control+b";
+      kb-remove-char-back:  "BackSpace";
+      kb-move-char-forward: "Control+f";
+      kb-mode-complete:     "Control+o";
 }
 
-@theme "/dev/null"
-
 * {
-	bg:				#151515;
-	fg:				#e8e8d3;
-	accent:				#687363;
-	button:				#1c1c1c;
-
-	background-color:		@bg;
-	text-color:			@fg;
+  background-color: #1e1e2e;
+  text-color:       #cdd6f4;
+font:             "JetBrainsMono Nerd Font 11";
 }
 
 window {
-	border-radius:                  7px;
-	width:			    	50%;
-	padding: 			32px;
-}
-
-prompt {
-	background-color:		@button;
-	enabled:			true;
-	padding:			0.5% 32px 0% -0.5%;
-	font:				"Rubik 10";
-}
-
-entry {
-    	placeholder:			"Search";
-	background-color:               @button;
-    	placeholder-color:              @fg;
-    	expand:                         true;
-    	padding:                        0.15% 0% 0% 0%;
-}
-
-inputbar {
-	children:			[ prompt, entry ];
-    	background-color:               @button;
-    	expand:                         false;
-    	border-radius:                  6px;
-    	margin:                         0%;
-    	padding:                        10px;
-}
-
-listview {
-    	columns:                        4;
-    	lines:	                        3;
-    	cycle:                          false;
-    	dynamic:                        true;
-    	layout:                         vertical;
+width:            45%;
+padding:          20px;
+                  border-radius:    12px;
+                  border-width:     1px;
+                  border-color:     #313244;
+                  background-color: #1e1e2e;
+                  text-color:       #cdd6f4;
 }
 
 mainbox {
-    	children:                       [ inputbar, listview ];
-    	spacing:                       	2%;
-    	padding:                        2% 1% 2% 1%;
+children:         [ inputbar, listview ];
+spacing:          14px;
+padding:          0px;
+                  background-color: #1e1e2e;
+                  text-color:       #cdd6f4;
+}
+
+inputbar {
+children:         [ prompt, entry ];
+                  background-color: #181825;
+                  border-radius:    10px;
+padding:          10px 14px;
+spacing:          10px;
+                  border-width:     1px;
+                  border-color:     #313244;
+                  text-color:       #cdd6f4;
+}
+
+prompt {
+  background-color: transparent;
+  text-color:       #89b4fa;
+padding:          0px;
+font:             "JetBrainsMono Nerd Font Bold 11";
+}
+
+entry {
+placeholder:       "Search…";
+                   placeholder-color: #6c7086;
+                   background-color:  transparent;
+                   text-color:        #cdd6f4;
+expand:            true;
+padding:           0px;
+}
+
+listview {
+columns:          3;
+lines:            4;
+cycle:            false;
+dynamic:          true;
+layout:           vertical;
+spacing:          8px;
+scrollbar:        false;
+                  background-color: transparent;
+                  text-color:       #cdd6f4;
 }
 
 element {
-    	orientation:                    vertical;
-    	padding:                        2% 0% 2% 0%;
+orientation:      vertical;
+padding:          10px 6px;
+spacing:          4px;
+                  border-radius:    10px;
+                  background-color: transparent;
+cursor:           pointer;
+                  text-color:       #a6adc8;
+}
+
+element normal.normal {
+  background-color: transparent;
+}
+
+element normal.urgent {
+  background-color: transparent;
+}
+
+element alternate.normal {
+  background-color: transparent;
+}
+
+element alternate.urgent {
+  background-color: transparent;
+}
+
+element selected.normal {
+  background-color: #45475a;
+  border-radius:    10px;
+}
+
+element selected.urgent {
+  background-color: #f38ba8;
+  border-radius:    10px;
 }
 
 element-icon {
-    	size:                           48px;
-    	horizontal-align:	 	0.5;
+size:             42px;
+                  horizontal-align: 0.5;
+                  background-color: transparent;
+                  text-color:       #cdd6f4;
 }
 
 element-text {
-    	expand:                         true;
-    	horizontal-align:               0.5;
-    	vertical-align:                 0.5;
-    	margin:                         0.5% 0.5% -0.5% 0.5%;
+expand:           true;
+                  horizontal-align: 0.5;
+                  vertical-align:   0.5;
+                  background-color: transparent;
+                  text-color:       #a6adc8;
+font:             "JetBrainsMono Nerd Font 10";
 }
 
-element-text, element-icon {
-	background-color:		inherit;
-	text-color:			inherit;
+element selected element-text {
+  text-color: #b4befe;
 }
 
-element selected {
-    	background-color:               @button;
-    	border-radius:                  6px;
+element selected element-icon {
+  background-color: transparent;
+}
+
+scrollbar {
+  handle-width:     6px;
+  handle-color:     #cba6f7;
+  background-color: transparent;
 }
